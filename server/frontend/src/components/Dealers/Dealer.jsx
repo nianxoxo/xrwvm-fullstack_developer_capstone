@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import Header from "../Header/Header";
-import positive from "../assets/positive.png";
 import "./Dealers.css";
 
 const dealers = {
@@ -28,7 +27,7 @@ function Dealer() {
           <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
             {saved.map((review, index) => (
               <div key={index} style={{ width: "240px", minHeight: "220px", border: "1px solid #999", borderRadius: "6px", padding: "12px", boxShadow: "0 2px 8px #999" }}>
-                <img src={positive} alt="positive sentiment" style={{ width: "36px", display: "block", margin: "0 auto 20px" }} />
+                <div style={{ width: "36px", height: "36px", borderRadius: "50%", background: "#49a942", color: "white", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px", fontWeight: "bold" }}>+</div>
                 <p>{review.review}</p>
                 <p style={{ marginTop: "60px", fontStyle: "italic", color: "#666" }}>{review.name} {review.car} {review.year}</p>
               </div>
